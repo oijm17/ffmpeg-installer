@@ -5,13 +5,13 @@ ERROR=0
 install_ffmpeg() {
     echo " -------------- Installing FFMPEG -------------- "
     cd $DOWNDIR
-    rm -vrf FFmpeg-master
+    rm -vrf ffmpeg-2.7.2
     wget -N http://ffmpeg.org/releases/ffmpeg-2.7.2.tar.gz -O ffmpeg.tar.gz
     tar -zxvf ffmpeg.tar.gz
     cd ffmpeg-2.7.2/
     ./configure --prefix=/usr --enable-shared --enable-nonfree \
     --enable-gpl --enable-pthreads --enable-decoder=liba52 \
-    --enable-libfaac  --enable-libmp3lame --extra-libs=-lx264 --enable-zlib \
+    --enable-libfaac  --enable-libmp3lame \
     --enable-libtheora --enable-libvorbis  --enable-libx264  --enable-libxvid \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib \
     --enable-version3 --extra-version=syslint --enable-libopencore-amrnb \
@@ -29,14 +29,13 @@ install_mplayer() {
     echo " -------------- Installing MPlayer -------------- "
     cd $DOWNDIR
     rm -vrf mplayer-export*
-    wget http://svn.mplayerhq.hu/MPlayer/releases/mplayer-export-snapshot.tar.bz2 -O mplayer.tar.bz2
-    tar xjf mplayer.tar.bz2
-    cd mplayer-export-*
+    svn checkout svn://svn.mplayerhq.hu/mplayer/trunk mplayer
+    cd mplayer
     git clone --depth 1 https://github.com/FFmpeg/FFmpeg ffmpeg; touch ffmpeg/mp_auto_pull #Grabbing ffmpeg first for verbosity
     sed -i 1521d configure
-    ./configure --prefix=/usr  --codecsdir=/usr/lib/codecs/   \
+    ./configure --prefix=/usr --codecsdir=/usr/lib/codecs/ \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib \
-    --confdir=/user/etc/mplayer || local ERROR=1
+    --confdir=/usr/etc/mplayer || local ERROR=1
     make || local ERROR=1
     make install $DESTDIR || local ERROR=1
     cp -f etc/codecs.conf /usr/etc/mplayer/codecs.conf
@@ -48,7 +47,7 @@ install_mp4box() {
     echo " -------------- Installing MP4Box -------------- "
     cd $DOWNDIR
     rm -rf gpac
-    svn co http://svn.code.sf.net/p/gpac/code/trunk/gpac gpac
+    svn co https://github.com/gpac/gpac/trunk gpac
     cd gpac/
     ./configure --enable-shared --prefix=/usr --static-mp4box || local ERROR=1
     #./configure --prefix=/usr --extra-cflags=-I/usr/include/ \

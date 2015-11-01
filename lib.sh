@@ -183,7 +183,7 @@ install_liba52() {
     LIBA52_VER="0.7.4" #2002-07-27
     cd $DOWNDIR
     rm -rf a52dec-$LIBA52_VER
-    wget -N http://liba52.sourceforge.net/files/a52dec-$LIBA52_VER.tar.gz
+    wget -N https://kakola.googlecode.com/files/a52dec-$LIBA52_VER.tar.gz
     tar -xvzf a52dec-$LIBA52_VER.tar.gz
     cd a52dec-$LIBA52_VER/
     ./bootstrap

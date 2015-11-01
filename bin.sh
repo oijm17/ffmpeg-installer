@@ -6,12 +6,12 @@ install_ffmpeg() {
     echo " -------------- Installing FFMPEG -------------- "
     cd $DOWNDIR
     rm -vrf FFmpeg-master
-    wget -N https://github.com/FFmpeg/FFmpeg/archive/master.zip -O ffmpeg.zip
-    unzip ffmpeg.zip
-    cd FFmpeg-master/
+    wget -N http://ffmpeg.org/releases/ffmpeg-2.7.2.tar.gz -O ffmpeg.tar.gz
+    tar -zxvf ffmpeg.tar.gz
+    cd ffmpeg-2.7.2/
     ./configure --prefix=/usr --enable-shared --enable-nonfree \
     --enable-gpl --enable-pthreads --enable-decoder=liba52 \
-    --enable-libfaac  --enable-libmp3lame \
+    --enable-libfaac  --enable-libmp3lame --extra-libs=-lx264 --enable-zlib \
     --enable-libtheora --enable-libvorbis  --enable-libx264  --enable-libxvid \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib \
     --enable-version3 --extra-version=syslint --enable-libopencore-amrnb \
@@ -50,7 +50,7 @@ install_mp4box() {
     rm -rf gpac
     svn co http://svn.code.sf.net/p/gpac/code/trunk/gpac gpac
     cd gpac/
-    ./configure --enable-shared --prefix=/usr  || local ERROR=1
+    ./configure --enable-shared --prefix=/usr --static-mp4box || local ERROR=1
     #./configure --prefix=/usr --extra-cflags=-I/usr/include/ \
     #--extra-ldflags=-L/usr/lib --disable-wx --strip
     make || local ERROR=1

@@ -6,9 +6,9 @@ install_ffmpeg() {
     echo " -------------- Installing FFMPEG -------------- "
     cd $DOWNDIR
     rm -vrf FFmpeg-master
-    wget -N https://www.ffmpeg.org/releases/ffmpeg-2.7.1.tar.gz -O ffmpeg.tar.gz
+    wget -N https://www.ffmpeg.org/releases/ffmpeg-2.4.11.tar.gz -O ffmpeg.tar.gz
     tar -zxvf ffmpeg.tar.gz
-    mv ffmpeg-2.7.1 FFmpeg-master
+    mv ffmpeg-2.4.11 FFmpeg-master
     cd FFmpeg-master/
     ./configure --prefix=/usr --enable-shared --enable-nonfree \
     --enable-gpl --enable-pthreads --enable-decoder=liba52 \

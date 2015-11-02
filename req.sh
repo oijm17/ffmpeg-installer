@@ -77,7 +77,7 @@ run_yum() {
     sed -i '/exclude/s/^/#/g' /etc/yum.conf
     yum remove -y ffmpeg x264 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer
 
-    yum groupinstall "Development Tools"
+    yum groupinstall "Development Tools" -y
     yum install ruby php-devel curl-devel gcc gcc-c++ libgcc gd gd-devel gettext \
     libjpeg* libjpeg-devel* libstdc++* libstdc++-devel* libtiff* \
     libtiff-devel* libtool* libxml* libxml2* wget \

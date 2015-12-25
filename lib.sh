@@ -39,12 +39,12 @@ install_libwmf() {
     LIBWMF_VER="0.2.8.4" #2005-7-27
     cd $DOWNDIR
     rm -vrf libwmf-$LIBWMF_VER
-    wget -N http://downloads.sourceforge.net/project/wvware/libwmf/LIBWMF_VER/libwmf-LIBWMF_VER.tar.gz
+    wget -N http://downloads.sourceforge.net/project/wvware/libwmf/$LIBWMF_VER/libwmf-$LIBWMF_VER.tar.gz
     tar -xvzf  libwmf-$LIBWMF_VER.tar.gz
     cd libwmf*
-    ./configure --enable-shared --prefix=/usr --with-freetype=/usr/ || local ERROR=1
-    make -j$cpu || local ERROR=1
-    make install $DESTDIR || local ERROR=1
+    ./configure --enable-shared --prefix=/usr --with-freetype=/usr/  || local ERROR=1
+    make -j$cpu  || local ERROR=1
+    make install $DESTDIR  || local ERROR=1
 
     ldconfig
     return $ERROR

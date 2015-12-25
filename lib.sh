@@ -383,7 +383,7 @@ install_libasound() {
     echo " -------------- Installing libasound -------------- "
     cd $DOWNDIR
     rm -rf alsa-lib*
-    wget ftp://ftp.alsa-project.org//pub/lib/alsa-lib-1.1.0.tar.bz2
+    wget -N ftp://ftp.alsa-project.org//pub/lib/alsa-lib-1.1.0.tar.bz2
     tar xjf alsa-lib*
     cd alsa-lib-*
     ./configure --enable-shared --prefix=/usr || local ERROR=1

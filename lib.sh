@@ -238,7 +238,7 @@ install_faad2() {
 
 install_yasm() {
     echo " -------------- Installing YASM -------------- " 
-    YASM_VER="1.2.0" #2011-10-31
+    YASM_VER="1.3.0" #2011-08-14
     cd $DOWNDIR
     rm -vrf yasm-$YASM_VER
     wget -N http://www.tortall.net/projects/yasm/releases/yasm-$YASM_VER.tar.gz
@@ -255,7 +255,7 @@ install_yasm() {
 
 install_nasm() {
     echo " -------------- Installing NASM -------------- "
-    NASM_VER="2.10.09" #2013-07-22
+    NASM_VER="2.11.08" #2013-07-22
     cd $DOWNDIR
     rm -vrf nasm-$NASM_VER
     wget -N http://www.nasm.us/pub/nasm/releasebuilds/$NASM_VER/nasm-$NASM_VER.tar.gz

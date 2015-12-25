@@ -100,7 +100,7 @@ install_codecs() {
 
 install_libogg() {
     echo " -------------- Installing libogg -------------- "
-    LIBOGG_VER="1.3.1" #2013-05-20
+    LIBOGG_VER="1.3.2" #2014-05-27
     cd $DOWNDIR
     rm -vrf libogg-$LIBOGG_VER
     wget -N http://downloads.xiph.org/releases/ogg/libogg-$LIBOGG_VER.tar.gz
@@ -116,7 +116,7 @@ install_libogg() {
 
 install_libvorbis() {
     echo " -------------- Installing libvorbis -------------- "
-    LIBVORBIS_VER="1.3.3" #2012-02-03
+    LIBVORBIS_VER="1.3.5" #2015-03-03
     cd $DOWNDIR
     rm -vrf libvorbis-$LIBVORBIS_VER
     wget -N http://downloads.xiph.org/releases/vorbis/libvorbis-$LIBVORBIS_VER.tar.gz
@@ -183,7 +183,7 @@ install_liba52() {
     LIBA52_VER="0.7.4" #2002-07-27
     cd $DOWNDIR
     rm -rf a52dec-$LIBA52_VER
-    wget -N https://kakola.googlecode.com/files/a52dec-$LIBA52_VER.tar.gz
+    wget -N http://liba52.sourceforge.net/files/a52dec-$LIBA52_VER.tar.gz
     tar -xvzf a52dec-$LIBA52_VER.tar.gz
     cd a52dec-$LIBA52_VER/
     ./bootstrap
@@ -319,7 +319,7 @@ install_live555() {
 
 install_re2c() {
     echo " -------------- Installing RE2C -------------- "
-    RE2C_VER="0.13.6" #2013-07-05
+    RE2C_VER="0.15.3" #2013-07-05
     cd $DOWNDIR
     echo "Removing old source"
     rm -vrf re2c-$RE2C_VER
@@ -383,7 +383,7 @@ install_libasound() {
     echo " -------------- Installing libasound -------------- "
     cd $DOWNDIR
     rm -rf alsa-lib*
-    wget ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.0.27.2.tar.bz2
+    wget ftp://ftp.alsa-project.org//pub/lib/alsa-lib-1.1.0.tar.bz2
     tar xjf alsa-lib*
     cd alsa-lib-*
     ./configure --enable-shared --prefix=/usr || local ERROR=1

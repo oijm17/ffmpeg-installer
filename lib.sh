@@ -20,7 +20,7 @@ install_libpng() {
 
 install_freetype() {
     echo " -------------- Installing FreeType -------------- "
-    FREETYPE_VER="2.6.2" #2013-06-19
+    FREETYPE_VER="2.6.2" #2015-11-30
     cd $DOWNDIR
     rm -vrf freetype-$FREETYPE_VER
     wget -N http://download.savannah.gnu.org/releases/freetype/freetype-$FREETYPE_VER.tar.gz

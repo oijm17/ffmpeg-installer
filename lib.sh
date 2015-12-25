@@ -323,7 +323,7 @@ install_re2c() {
     cd $DOWNDIR
     echo "Removing old source"
     rm -vrf re2c-$RE2C_VER
-    wget -N http://downloads.sourceforge.net/project/re2c/re2c/$RE2C_VER/re2c-$RE2C_VER.tar.gz
+    wget -N https://github.com/skvadrik/re2c/releases/download/$RE2C_VER/re2c-$RE2C_VER.tar.gz
     tar -xvzf re2c-$RE2C_VER.tar.gz
     cd re2c-$RE2C_VER/
     ./configure --enable-shared --prefix=/usr || local ERROR=1

@@ -29,9 +29,9 @@ install_mplayer() {
     echo " -------------- Installing MPlayer -------------- "
     cd $DOWNDIR
     rm -vrf mplayer-export*
-    svn checkout svn://svn.mplayerhq.hu/mplayer/trunk mplayer
-    cd mplayer
-    git clone --depth 1 https://github.com/FFmpeg/FFmpeg ffmpeg; touch ffmpeg/mp_auto_pull #Grabbing ffmpeg first for verbosity
+    wget -N http://mplayerhq.hu/MPlayer/releases/MPlayer-1.3.0.tar.gz
+    tar -xzvf MPlayer-1.3.0.tar.gz
+    cd MPlayer-1.3.0
     sed -i 1521d configure
     ./configure --prefix=/usr --codecsdir=/usr/lib/codecs \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib \

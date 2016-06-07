@@ -128,7 +128,7 @@ install_git() {
             rm -vrf git-master
             yum -y install expat-devel gettext-devel openssl-devel zlib-devel
             wget -N https://github.com/git/git/archive/master.tar.gz
-            tar -xzvf master
+            tar -xzvf master.tar.gz
             cd git-master
             make prefix=/usr/local all
             make prefix=/usr/local install

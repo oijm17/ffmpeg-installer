@@ -238,7 +238,7 @@ install_faad2() {
 
 install_yasm() {
     echo " -------------- Installing YASM -------------- " 
-    YASM_VER="1.3.0" #2011-08-14
+    YASM_VER="1.3.0" #2014-08-11
     cd $DOWNDIR
     rm -vrf yasm-$YASM_VER
     wget -N http://www.tortall.net/projects/yasm/releases/yasm-$YASM_VER.tar.gz

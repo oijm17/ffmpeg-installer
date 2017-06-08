@@ -319,7 +319,7 @@ install_live555() {
 
 install_re2c() {
     echo " -------------- Installing RE2C -------------- "
-    RE2C_VER="0.15.3" #2013-07-05
+    RE2C_VER="0.16" #2016-01-21
     cd $DOWNDIR
     echo "Removing old source"
     rm -vrf re2c-$RE2C_VER
@@ -383,7 +383,7 @@ install_libasound() {
     echo " -------------- Installing libasound -------------- "
     cd $DOWNDIR
     rm -rf alsa-lib*
-    wget -N https://fossies.org/linux/misc/alsa-lib-1.1.2.tar.bz2
+    wget -N ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.1.4.1.tar.bz2
     # wget -N ftp://ftp.alsa-project.org//pub/lib/alsa-lib-1.1.0.tar.bz2
     tar xjf alsa-lib*
     cd alsa-lib-*

@@ -164,7 +164,7 @@ install_libtheora() {
 
 install_openamr() {
     echo " -------------- Installing OpenAMR -------------- "
-    OPENAMR_VER="0.1.3" #2012-02-20
+    OPENAMR_VER="0.1.5" #2017-03-16
     cd $DOWNDIR
     rm -vrf opencore-$OPENAMR_VER
     wget -N http://downloads.sourceforge.net/project/opencore-amr/opencore-amr/opencore-amr-$OPENAMR_VER.tar.gz

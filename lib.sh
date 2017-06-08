@@ -255,7 +255,7 @@ install_yasm() {
 
 install_nasm() {
     echo " -------------- Installing NASM -------------- "
-    NASM_VER="2.11.08" #2013-07-22
+    NASM_VER="2.14rc0" #2017-05-01
     cd $DOWNDIR
     rm -vrf nasm-$NASM_VER
     wget -N http://www.nasm.us/pub/nasm/releasebuilds/$NASM_VER/nasm-$NASM_VER.tar.gz

@@ -11,8 +11,8 @@ install_ffmpeg() {
     cd FFmpeg-master/
     ./configure --prefix=/usr --enable-shared --enable-nonfree \
     --enable-gpl --enable-pthreads --enable-decoder=liba52 \
-    --enable-libfaac  --enable-libmp3lame \
-    --enable-libtheora --enable-libvorbis  --enable-libx264  --enable-libxvid \
+    --enable-libfaac --enable-libmp3lame \
+    --enable-libtheora --enable-libvorbis --enable-libx264 --enable-libxvid \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib \
     --enable-version3 --extra-version=syslint --enable-libopencore-amrnb \
     --enable-libopencore-amrwb --enable-avfilter --enable-libvpx || local ERROR=1

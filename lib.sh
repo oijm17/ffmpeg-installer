@@ -201,34 +201,14 @@ install_liba52() {
     return $ERROR
 }
 
-install_facc() {
-    echo " -------------- Installing FACC -------------- "
-    FACC_VER="1.28" #2009-02-10
+install_fdk-aac() {
+    echo " -------------- Installing FDK AAC -------------- "
     cd $DOWNDIR
-    rm -rf facc-$FACC_VER
-    wget -N http://downloads.sourceforge.net/project/faac/faac-src/faac-$FACC_VER/faac-$FACC_VER.tar.gz
-    tar -xvzf faac-$FACC_VER.tar.gz
-    cd faac-$FACC_VER/
-    sed -i 126d common/mp4v2/mpeg4ip.h
-    sh bootstrap
-    ./configure --enable-shared --prefix=/usr || local ERROR=1
-    make -j$cpu || local ERROR=1
-    make install $DESTDIR || local ERROR=1
-    
-    ldconfig
-    return $ERROR
-}
-
-install_faad2() {
-    echo " -------------- Installing FAAD -------------- "
-    FAAD_VER="2.7" #2009-02-10
-    cd $DOWNDIR
-    rm -rf faad2-$FAAD_VER
-    wget -N http://downloads.sourceforge.net/faac/faad2-$FAAD_VER.tar.gz
-    tar -xvzf faad2-$FAAD_VER.tar.gz
-    cd faad2-$FAAD_VER/
-    sh bootstrap
-    ./configure --enable-shared --prefix=/usr  --with-mpeg4ip || local ERROR=1
+    rm -vrf fdk-aac
+    git clone https://github.com/mstorsjo/fdk-aac.git
+    cd fdk-aac/
+    ./autogen.sh || local ERROR=1
+    ./configure  --prefix=/usr --enable-shared --enable-static || local ERROR=1
     make -j$cpu || local ERROR=1
     make install $DESTDIR || local ERROR=1
     

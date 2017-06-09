@@ -111,13 +111,9 @@ then
     install_liba52 >>$LOG 2>1
     dots "Installing liba52" $?
 
-    dots "Installing FACC"
-    install_facc >>$LOG 2>1
+    dots "Installing FDK AAC"
+    install_fdk-aac >>$LOG 2>1
     dots "Installing FACC" $? 
-
-    dots "Installing FAAD2"
-    install_faad2 >>$LOG 2>1
-    dots "Installing FAAD2" $?
 
     dots "Installing YASM"
     install_yasm >>$LOG 2>1

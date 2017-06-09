@@ -112,7 +112,7 @@ then
     dots "Installing liba52" $?
 
     dots "Installing FDK AAC"
-    install_fdk-aac >>$LOG 2>1
+    install_fdkaac >>$LOG 2>1
     dots "Installing FDK AAC" $? 
 
     dots "Installing YASM"

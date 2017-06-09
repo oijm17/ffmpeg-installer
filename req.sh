@@ -102,7 +102,7 @@ check_threads() {
         else
             cd /usr/local/src
             rm -rf ActivePerl*
-            wget http://downloads.activestate.com/ActivePerl/releases/5.18.1.1800/ActivePerl-5.18.1.1800-x86_64-linux-glibc-2.5-297570.tar.gz
+            wget http://downloads.activestate.com/ActivePerl/releases/5.24.1.2402/ActivePerl-5.24.1.2402-x86_64-linux-glibc-2.15-401614.tar.gz
             tar xzf ActivePerl*
             cd ActivePerl*
             sh install.sh --license-accepted --prefix /opt/wt-perl/ --no-install-html

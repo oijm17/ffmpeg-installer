@@ -113,7 +113,7 @@ then
 
     dots "Installing FDK AAC"
     install_fdk-aac >>$LOG 2>1
-    dots "Installing FACC" $? 
+    dots "Installing FDK AAC" $? 
 
     dots "Installing YASM"
     install_yasm >>$LOG 2>1

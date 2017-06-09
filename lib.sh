@@ -201,7 +201,7 @@ install_liba52() {
     return $ERROR
 }
 
-install_fdk-aac() {
+install_fdkaac() {
     echo " -------------- Installing FDK AAC -------------- "
     cd $DOWNDIR
     rm -vrf fdk-aac

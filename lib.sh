@@ -207,7 +207,7 @@ install_fdk-aac() {
     rm -vrf fdk-aac
     git clone https://github.com/mstorsjo/fdk-aac.git
     cd fdk-aac/
-    ./autogen.sh || local ERROR=1
+    ./autogen.sh
     ./configure  --prefix=/usr --enable-shared --enable-static || local ERROR=1
     make -j$cpu || local ERROR=1
     make install $DESTDIR || local ERROR=1

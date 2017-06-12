@@ -86,8 +86,8 @@ install_codecs() {
     FFMPEG_CODECS_VER="20110131"
     cd $DOWNDIR
     rm -vfr all-$FFMPEG_CODECS_VER
-    #wget -N http://mirror.ffmpeginstaller.com/source/codecs/all-$FFMPEG_CODEC_VER.tar.bz2
-    wget -N http://www.mplayerhq.hu/MPlayer/releases/codecs/all-$FFMPEG_CODEC_VER.tar.bz2
+    #wget -N http://mirror.ffmpeginstaller.com/source/codecs/all-$FFMPEG_CODECS_VER.tar.bz2
+    wget -N http://www.mplayerhq.hu/MPlayer/releases/codecs/all-$FFMPEG_CODECS_VER.tar.bz2
     tar -xvjf all-$FFMPEG_CODECS_VER.tar.bz2
     chown -R root.root all-$FFMPEG_CODECS_VER/
     mkdir -pv /usr/lib/codecs/

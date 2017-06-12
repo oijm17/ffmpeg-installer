@@ -37,7 +37,7 @@ Libraries Installed
 
 Programs Installed
 ---
-- Fffmpeg
+- Ffmpeg
 - MPlayer
 - MP4Box
 - Ffmpeg-php (GitHub Fork) - (Discontinued For lastest ffmpeg Version)

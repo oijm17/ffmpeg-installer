@@ -184,6 +184,6 @@ dots "Installing MP4Box"
 install_mp4box >>$LOG 2>1
 dots "Installing MP4Box" $?
 
-dots "Installing Ffmpeg-php"
+dots "Installing ffmpeg-php"
 install_ffmpegphp >>$LOG 2>1
-dots "Installing Ffmpeg-php" $?
+dots "Installing ffmpeg-php" $?

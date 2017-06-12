@@ -26,7 +26,7 @@ install_ffmpeg() {
     cp -vf tools/qt-faststart /usr/bin/
     ldconfig
 
-    return $ERROR
+    return 0
 }
 
 install_mediainfo() {

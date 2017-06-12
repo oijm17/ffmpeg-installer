@@ -54,6 +54,9 @@ remove_stuff() {
     rm -rf /usr/local/lib/libvorbis*
     rm -f /usr/lib/libxvidcore.*
 
+    rm -rf /usr/share/ffmpeg
+    rm -rf /usr/local/share/ffmpeg
+
     unlink /usr/bin/ffmpeg >/dev/null 2>&1
     unlink /usr/local/bin/ffmpeg >/dev/null 2>&1
     unlink /usr/bin/mediainfo >/dev/null 2>&1

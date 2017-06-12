@@ -3,11 +3,15 @@
 ERROR=0
 
 install_ffmpeg() {
-    echo " -------------- Installing ffmpeg -------------- "
+    echo " -------------- Installing ffmpeg + Presets -------------- "
     cd $DOWNDIR
     rm -vrf FFmpeg-master
+    rm -rf presets*
     wget -N https://github.com/FFmpeg/FFmpeg/archive/master.zip -O ffmpeg.zip
+    wget -N http://mirror.ffmpeginstaller.com/source/presets/presets.tar.gz
     unzip ffmpeg.zip
+    tar -xvzf presets.tar.gz
+    cp -vrf presets/*.ffpreset /usr/share/ffmpeg/
     cd FFmpeg-master/
     ./configure --prefix=/usr --enable-shared --enable-nonfree \
     --enable-gpl --enable-pthreads --enable-decoder=liba52 \

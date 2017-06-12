@@ -4,7 +4,7 @@
 ERROR=0
 
 install_libpng() {
-    echo " -------------- Installing libpng -------------- "
+    echo " -------------- Installing Libpng -------------- "
     cd $DOWNDIR
     rm -vrf libpng-*
     wget -N ftp://ftp.simplesystems.org/pub/png/src/libpng16/$(curl -L ftp://ftp.simplesystems.org/pub/png/src/libpng16/ 2>1 | grep -E ".tar.gz$" | awk '{ print $NF }')

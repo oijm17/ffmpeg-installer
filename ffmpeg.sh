@@ -172,6 +172,10 @@ dots "Installing FFMPEG"
 install_ffmpeg >>$LOG 2>1
 dots "Installing FFMPEG" $?
 
+dots "Installing Mediainfo"
+install_mediainfo >>$LOG 2>1
+dots "Installing Mediainfo" $?
+
 dots "Installing MPlayer"
 install_mplayer >>$LOG 2>1
 dots "Installing MPlayer" $?
@@ -180,6 +184,6 @@ dots "Installing MP4Box"
 install_mp4box >>$LOG 2>1
 dots "Installing MP4Box" $?
 
-dots "Installing FFMPEG-PHP"
+dots "Installing Ffmpeg-php"
 install_ffmpegphp >>$LOG 2>1
-dots "Installing FFMPEG-PHP" $?
+dots "Installing Ffmpeg-php" $?

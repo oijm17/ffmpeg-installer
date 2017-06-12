@@ -168,7 +168,7 @@ fi
 
 echo -e "\n#### Installing FFMPEG Binaries #### \n"
 
-dots "Installing FFMPEG"
+dots "Installing Ffmpeg"
 install_ffmpeg >>$LOG 2>1
 dots "Installing FFMPEG" $?
 

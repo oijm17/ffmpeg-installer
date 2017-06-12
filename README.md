@@ -22,8 +22,7 @@ Libraries Installed
 - libtheora
 - openamr
 - liba52
-- FAAC
-- FAAD2
+- libfdk
 - YASM
 - NASM
 - XVID
@@ -40,7 +39,7 @@ Programs Installed
 - FFMPEG
 - MPlayer
 - MP4Box
-- FFMPEG-PHP (GitHub Fork)
+- FFMPEG-PHP (GitHub Fork) - (Discontinued For lastest ffmpeg Version)
 
 Future
 ---

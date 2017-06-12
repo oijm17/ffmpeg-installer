@@ -282,7 +282,7 @@ install_xvid() {
 }
 
 install_x264() {
-    echo " -------------- Installing x264 -------------- "
+    echo " -------------- Installing X264 -------------- "
     cd $DOWNDIR
     rm -vrf x264
     git clone http://repo.or.cz/r/x264.git x264
@@ -330,7 +330,7 @@ install_re2c() {
 }
 
 install_amrnb() {
-    echo " -------------- Installing AMRNB -------------- "
+    echo " -------------- Installing Amrnb -------------- "
     AMR_VER="11.0.0.0" #2013-04-05
     cd $DOWNDIR
     rm -vrf amrnb-$AMR_VER
@@ -346,7 +346,7 @@ install_amrnb() {
 }
 
 install_amrwb() {
-    echo " -------------- Installing AMRWB -------------- "
+    echo " -------------- Installing Amrwb -------------- "
     cd $DOWNDIR
     rm -vrf amrwb-$AMR_VER
     wget -N ftp://ftp.penguin.cz/pub/users/utx/amr/amrwb-$AMR_VER.tar.bz2

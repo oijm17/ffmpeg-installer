@@ -56,6 +56,8 @@ remove_stuff() {
 
     unlink /usr/bin/ffmpeg >/dev/null 2>&1
     unlink /usr/local/bin/ffmpeg >/dev/null 2>&1
+    unlink /usr/bin/mediainfo >/dev/null 2>&1
+    unlink /usr/local/bin/mediainfo >/dev/null 2>&1
     unlink /bin/mplayer >/dev/null 2>&1
     unlink /usr/bin/mplayer >/dev/null 2>&1
     unlink /usr/local/bin/mplayer >/dev/null 2>&1

@@ -75,9 +75,9 @@ then
     install_libwmf >>$LOG 2>1
     dots "Installing libwmf" $?
 
-    dots "Installing FLVTool"
+    dots "Installing FlvTool2"
     install_flvtool >>$LOG 2>1
-    dots "Installing FLVTool" $?
+    dots "Installing FlvTool2" $?
 
     dots "Installing Lame"
     install_lame >>$LOG 2>1

@@ -99,7 +99,7 @@ install_codecs() {
 }
 
 install_libogg() {
-    echo " -------------- Installing libogg -------------- "
+    echo " -------------- Installing Libogg -------------- "
     LIBOGG_VER="1.3.2" #2014-05-27
     cd $DOWNDIR
     rm -vrf libogg-$LIBOGG_VER
@@ -115,7 +115,7 @@ install_libogg() {
 }
 
 install_libvorbis() {
-    echo " -------------- Installing libvorbis -------------- "
+    echo " -------------- Installing Libvorbis -------------- "
     LIBVORBIS_VER="1.3.5" #2015-03-03
     cd $DOWNDIR
     rm -vrf libvorbis-$LIBVORBIS_VER
@@ -147,7 +147,7 @@ install_vorbistools() {
 }
 
 install_libtheora() {
-    echo " -------------- Installing libtheora -------------- "
+    echo " -------------- Installing Libtheora -------------- "
     LIBTHEORA_VER="1.1.1" #2010-01-25
     cd $DOWNDIR
     rm -vrf libtheora-$LIBTHEORA_VER
@@ -163,7 +163,7 @@ install_libtheora() {
 }
 
 install_openamr() {
-    echo " -------------- Installing OpenAMR -------------- "
+    echo " -------------- Installing Opencore-AMR -------------- "
     OPENAMR_VER="0.1.5" #2017-03-16
     cd $DOWNDIR
     rm -vrf opencore-$OPENAMR_VER
@@ -313,7 +313,7 @@ install_live555() {
 }
 
 install_re2c() {
-    echo " -------------- Installing RE2C -------------- "
+    echo " -------------- Installing Re2c -------------- "
     RE2C_VER="0.16" #2016-01-21
     cd $DOWNDIR
     echo "Removing old source"
@@ -361,7 +361,7 @@ install_amrwb() {
 }
 
 install_libvpx() {
-    echo " -------------- Installing libvpx -------------- "
+    echo " -------------- Installing Libvpx -------------- "
     cd $DOWNDIR
     rm -vrf libvpx
     git clone https://chromium.googlesource.com/webm/libvpx libvpx
@@ -375,7 +375,7 @@ install_libvpx() {
 }
 
 install_libasound() {
-    echo " -------------- Installing libasound -------------- "
+    echo " -------------- Installing Libasound -------------- "
     cd $DOWNDIR
     rm -rf alsa-lib*
     wget -N ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.1.4.1.tar.bz2

@@ -82,7 +82,7 @@ install_lame() {
 }
 
 install_codecs() {
-    echo " -------------- Installing Codecs -------------- "
+    echo " -------------- Installing Mplayer Codecs -------------- "
     FFMPEG_CODECS_VER="20110131"
     cd $DOWNDIR
     rm -vfr all-$FFMPEG_CODECS_VER

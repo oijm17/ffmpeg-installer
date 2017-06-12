@@ -23,6 +23,7 @@ Libraries Installed
 - openamr
 - Liba52
 - Libfdk
+- Libopus
 - Yasm
 - Nasm
 - Xvid
@@ -36,10 +37,10 @@ Libraries Installed
 
 Programs Installed
 ---
-- FFMPEG
+- Fffmpeg
 - MPlayer
 - MP4Box
-- FFMPEG-PHP (GitHub Fork) - (Discontinued For lastest ffmpeg Version)
+- Ffmpeg-php (GitHub Fork) - (Discontinued For lastest ffmpeg Version)
 
 Future
 ---

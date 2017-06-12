@@ -111,21 +111,25 @@ then
     install_liba52 >>$LOG 2>1
     dots "Installing liba52" $?
 
-    dots "Installing FDK AAC"
+    dots "Installing Fdk-AAC"
     install_fdkaac >>$LOG 2>1
-    dots "Installing FDK AAC" $? 
+    dots "Installing Fdk-AAC" $? 
 
-    dots "Installing YASM"
+    dots "Installing Libopus"
+    install_libopus >>$LOG 2>1
+    dots "Installing Libopus" $?
+
+    dots "Installing Yasm"
     install_yasm >>$LOG 2>1
-    dots "Installing YASM" $?
+    dots "Installing Yasm" $?
 
-    dots "Installing NASM"
+    dots "Installing Nasm"
     install_nasm >>$LOG 2>1
-    dots "Installing NASM" $?
+    dots "Installing Nasm" $?
 
-    dots "Installing XVID"
+    dots "Installing Xvid"
     install_xvid >>$LOG 2>1
-    dots "Installing XVID" $?
+    dots "Installing Xvid" $?
 
     dots "Installing x264"
     install_x264 >>$LOG 2>1

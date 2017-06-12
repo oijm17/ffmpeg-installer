@@ -65,7 +65,7 @@ install_flvtool() {
 }
 
 install_lame() {
-    echo " -------------- Installing LAME -------------- "
+    echo " -------------- Installing Lame -------------- "
     LAME_MJVER="3.99" #2012-02-28
     LAME_MNVER=".5"
     cd $DOWNDIR
@@ -179,7 +179,7 @@ install_openamr() {
 }
 
 install_liba52() {
-    echo " -------------- Installing liba52 -------------- "
+    echo " -------------- Installing Liba52 -------------- "
     LIBA52_VER="0.7.4" #2002-07-27
     cd $DOWNDIR
     rm -rf a52dec-$LIBA52_VER
@@ -265,7 +265,7 @@ install_nasm() {
 }
 
 install_xvid() {
-    echo " -------------- Installing XVID -------------- "
+    echo " -------------- Installing Xvid -------------- "
     cd $DOWNDIR
     #need latest for MP4Box to work
     rm -vrf xvid_*

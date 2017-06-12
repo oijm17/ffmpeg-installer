@@ -26,16 +26,16 @@ install_ffmpeg() {
     cp -vf tools/qt-faststart /usr/bin/
     ldconfig
 
-    return 0
+    return $ERROR
 }
 
 install_mediainfo() {
     echo " -------------- Installing Medianfo -------------- "
     cd $DOWNDIR
     rm -vrf mplayer-*
-    sudo rpm -ivh http://mediaarea.net/download/binary/libzen0/0.4.32/libzen0-0.4.32.x86_64.CentOS_7.rpm || local ERROR=1
-    sudo rpm -ivh http://mediaarea.net/download/binary/libmediainfo0/0.7.80/libmediainfo0-0.7.80.x86_64.CentOS_7.rpm || local ERROR=1
-    sudo rpm -ivh http://mediaarea.net/download/binary/mediainfo/0.7.80/mediainfo-0.7.80.x86_64.CentOS_7.rpm || local ERROR=1
+    sudo rpm -ivh http://mediaarea.net/download/binary/libzen0/0.4.32/libzen0-0.4.32.x86_64.CentOS_7.rpm || local ERROR=0
+    sudo rpm -ivh http://mediaarea.net/download/binary/libmediainfo0/0.7.80/libmediainfo0-0.7.80.x86_64.CentOS_7.rpm || local ERROR=0
+    sudo rpm -ivh http://mediaarea.net/download/binary/mediainfo/0.7.80/mediainfo-0.7.80.x86_64.CentOS_7.rpm || local ERROR=0
 
     return $ERROR
 }

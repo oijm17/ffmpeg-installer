@@ -51,7 +51,7 @@ install_libwmf() {
 }
 
 install_flvtool() {
-    echo " -------------- Installing FLVTool -------------- "
+    echo " -------------- Installing FlvTool2 -------------- "
     cd $DOWNDIR
     rm -vrf flvtool2
     git clone https://github.com/unnu/flvtool2.git flvtool2

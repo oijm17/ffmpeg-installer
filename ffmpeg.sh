@@ -71,7 +71,7 @@ then
     install_freetype >>$LOG 2>1
     dots "Installing Freetype" $?
 
-    dots "Installing libwmf"
+    dots "Installing Libwmf"
     install_libwmf >>$LOG 2>1
     dots "Installing libwmf" $?
 
@@ -89,11 +89,11 @@ then
 
     dots "Installing Libogg"
     install_libogg >>$LOG 2>1
-    dots "Installing libogg" $?
+    dots "Installing Libogg" $?
 
     dots "Installing Libvorbis"
     install_libvorbis >>$LOG 2>1
-    dots "Installing libvorbis" $?
+    dots "Installing Libvorbis" $?
 
     dots "Installing VorbisTools"
     install_vorbistools >>$LOG 2>1
@@ -103,9 +103,9 @@ then
     install_libtheora >>$LOG 2>1
     dots "Installing Libtheora" $?
 
-    dots "Installing Opencore-amr"
+    dots "Installing Opencore-AMR"
     install_openamr >>$LOG 2>1
-    dots "Installing Opencore-amr" $?
+    dots "Installing Opencore-AMR" $?
 
     dots "Installing Liba52" 
     install_liba52 >>$LOG 2>1
@@ -139,9 +139,9 @@ then
     install_live555 >>$LOG 2>1
     dots "Installing Live555" $?
 
-    dots "Installing re2c"
+    dots "Installing Re2c"
     install_re2c >>$LOG 2>1
-    dots "Installing re2c" $?
+    dots "Installing Re2c" $?
 
     dots "Installing amrnb"
     install_amrnb >>$LOG 2>1
@@ -151,13 +151,13 @@ then
     install_amrwb >>$LOG 2>1
     dots "Installing amrwb" $?
 
-    dots "Installing libvpx"
+    dots "Installing Libvpx"
     install_libvpx >>$LOG 2>1
-    dots "Installing libvpx" $?
+    dots "Installing Libvpx" $?
     
-    dots "Installing libasound"
+    dots "Installing Libasound"
     install_libasound >>$LOG 2>1
-    dots "Installing libasound" $?
+    dots "Installing Libasound" $?
 
     ldconfig 
 else

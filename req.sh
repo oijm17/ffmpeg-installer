@@ -18,6 +18,7 @@ remove_stuff() {
     rm -rf /lib/libavutil*
     rm -rf /lib/libdha*
     rm -rf /lib/libfdk*
+    rm -rf /lib/libopus*
     rm -rf /lib/libmp3lame*
     rm -rf /lib/libmp4v2*
     rm -rf /lib/libogg*
@@ -31,6 +32,7 @@ remove_stuff() {
     rm -rf /usr/lib/libavutil*
     rm -rf /usr/lib/libdha*
     rm -rf /usr/lib/libfdk*
+    rm -rf /usr/lib/libopus*
     rm -rf /usr/lib/libmp3lame*
     rm -rf /usr/lib/libmp4v2*
     rm -rf /usr/lib/libogg*
@@ -44,6 +46,7 @@ remove_stuff() {
     rm -rf /usr/local/lib/libavutil*
     rm -rf /usr/local/lib/libdha*
     rm -rf /usr/local/lib/libfdk*
+    rm -rf /usr/local/lib/libopus*
     rm -rf /usr/local/lib/libmp3lame*
     rm -rf /usr/local/lib/libmp4v2*
     rm -rf /usr/local/lib/libogg*

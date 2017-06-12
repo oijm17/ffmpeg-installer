@@ -35,7 +35,7 @@ install_freetype() {
 }
 
 install_libwmf() {
-    echo " -------------- Installing libwmf -------------- "    
+    echo " -------------- Installing Libwmf -------------- "    
     LIBWMF_VER="0.2.8.4" #2005-7-27
     cd $DOWNDIR
     rm -vrf libwmf-$LIBWMF_VER

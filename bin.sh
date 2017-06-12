@@ -3,7 +3,7 @@
 ERROR=0
 
 install_ffmpeg() {
-    echo " -------------- Installing FFMPEG -------------- "
+    echo " -------------- Installing Ffmpeg -------------- "
     cd $DOWNDIR
     rm -vrf FFmpeg-master
     wget -N https://github.com/FFmpeg/FFmpeg/archive/master.zip -O ffmpeg.zip
@@ -59,7 +59,7 @@ install_mp4box() {
 }
 
 install_ffmpegphp() {
-    echo " -------------- Installing PHP-FFMPEG -------------- "
+    echo " -------------- Installing Ffmpeg-php -------------- "
     cd $DOWNDIR
     rm -rfv ffmpeg-php
     git clone https://github.com/tony2001/ffmpeg-php.git

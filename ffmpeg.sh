@@ -1,8 +1,8 @@
 ###############################
 #   FFMPEG Installer Script   #
-#       Stephen Simpson       #
-#        For RHEL 5/6         #
-#       v0.2 - 01/11/14       #
+#   Stephen Simpson / Oijm17  #
+#        For RHEL 5/6/        #
+#       v0.5 - 10/06/17       #
 ###############################
 
 ## Includes

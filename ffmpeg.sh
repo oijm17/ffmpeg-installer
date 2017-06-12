@@ -131,9 +131,9 @@ then
     install_xvid >>$LOG 2>1
     dots "Installing Xvid" $?
 
-    dots "Installing x264"
+    dots "Installing X264"
     install_x264 >>$LOG 2>1
-    dots "Installing x264" $?
+    dots "Installing X264" $?
 
     dots "Installing Live555"
     install_live555 >>$LOG 2>1
@@ -143,11 +143,11 @@ then
     install_re2c >>$LOG 2>1
     dots "Installing Re2c" $?
 
-    dots "Installing amrnb"
+    dots "Installing Amrnb"
     install_amrnb >>$LOG 2>1
     dots "Installing amrnb" $?
 
-    dots "Installing amrwb" 
+    dots "Installing Amrwb" 
     install_amrwb >>$LOG 2>1
     dots "Installing amrwb" $?
 
@@ -168,9 +168,9 @@ fi
 
 echo -e "\n#### Installing FFMPEG Binaries #### \n"
 
-dots "Installing ffmpeg"
+dots "Installing ffmpeg + Presets"
 install_ffmpeg >>$LOG 2>1
-dots "Installing ffmpeg" $?
+dots "Installing ffmpeg + Presets" $?
 
 dots "Installing Mediainfo"
 install_mediainfo >>$LOG 2>1

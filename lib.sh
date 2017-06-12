@@ -202,7 +202,7 @@ install_liba52() {
 }
 
 install_fdkaac() {
-    echo " -------------- Installing Fdk-AAC -------------- "
+    echo " -------------- Installing Libfdk -------------- "
     cd $DOWNDIR
     rm -vrf fdk-aac
     git clone https://github.com/mstorsjo/fdk-aac.git

@@ -80,7 +80,7 @@ run_yum() {
     yum groupinstall "Development Tools" -y
     yum install ruby php-devel curl-devel gcc gcc-c++ libgcc gd gd-devel gettext \
     libjpeg* libjpeg-devel* libstdc++* libstdc++-devel* libtiff* \
-    libtiff-devel* libtool* libxml* libxml2* wget \
+    libtiff-devel* opus-devel* libtool* libxml* libxml2* wget \
     libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* \
     ncurses-devel ncurses patch make apr-util giflib-devel giflib neon \
     expat-devel gettext-devel openssl-devel subversion SDL-devel freeglut-devel perl -y

@@ -83,15 +83,15 @@ then
     install_lame >>$LOG 2>1
     dots "Installing Lame" $?
 
-    dots "Installing Codecs"
+    dots "Installing MPlayer Codecs"
     install_codecs >>$LOG 2>1
-    dots "Installing Codecs" $?
+    dots "Installing Mplayer Codecs" $?
 
-    dots "Installing libogg"
+    dots "Installing Libogg"
     install_libogg >>$LOG 2>1
     dots "Installing libogg" $?
 
-    dots "Installing libvorbis"
+    dots "Installing Libvorbis"
     install_libvorbis >>$LOG 2>1
     dots "Installing libvorbis" $?
 
@@ -99,13 +99,13 @@ then
     install_vorbistools >>$LOG 2>1
     dots "Installing VorbisTools" $?
 
-    dots "Installing libtheora"
+    dots "Installing Libtheora"
     install_libtheora >>$LOG 2>1
-    dots "Installing libtheora" $?
+    dots "Installing Libtheora" $?
 
-    dots "Installing openamr"
+    dots "Installing Opencore-amr"
     install_openamr >>$LOG 2>1
-    dots "Installing openamr" $?
+    dots "Installing Opencore-amr" $?
 
     dots "Installing Liba52" 
     install_liba52 >>$LOG 2>1
@@ -170,15 +170,15 @@ echo -e "\n#### Installing FFMPEG Binaries #### \n"
 
 dots "Installing ffmpeg"
 install_ffmpeg >>$LOG 2>1
-dots "Installing FFMPEG" $?
+dots "Installing ffmpeg" $?
 
 dots "Installing Mediainfo"
 install_mediainfo >>$LOG 2>1
 dots "Installing Mediainfo" $?
 
-dots "Installing MPlayer + Codecs"
+dots "Installing MPlayer"
 install_mplayer >>$LOG 2>1
-dots "Installing MPlayer + Codecs" $?
+dots "Installing MPlayer" $?
 
 dots "Installing MP4Box"
 install_mp4box >>$LOG 2>1

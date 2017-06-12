@@ -73,7 +73,7 @@ then
 
     dots "Installing Libwmf"
     install_libwmf >>$LOG 2>1
-    dots "Installing libwmf" $?
+    dots "Installing Libwmf" $?
 
     dots "Installing FlvTool2"
     install_flvtool >>$LOG 2>1

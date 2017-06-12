@@ -145,11 +145,11 @@ then
 
     dots "Installing Amrnb"
     install_amrnb >>$LOG 2>1
-    dots "Installing amrnb" $?
+    dots "Installing Amrnb" $?
 
     dots "Installing Amrwb" 
     install_amrwb >>$LOG 2>1
-    dots "Installing amrwb" $?
+    dots "Installing Amrwb" $?
 
     dots "Installing Libvpx"
     install_libvpx >>$LOG 2>1

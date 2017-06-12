@@ -107,9 +107,9 @@ then
     install_openamr >>$LOG 2>1
     dots "Installing openamr" $?
 
-    dots "Installing liba52" 
+    dots "Installing Liba52" 
     install_liba52 >>$LOG 2>1
-    dots "Installing liba52" $?
+    dots "Installing Liba52" $?
 
     dots "Installing Fdk-AAC"
     install_fdkaac >>$LOG 2>1

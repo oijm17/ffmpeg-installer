@@ -95,7 +95,7 @@ install_codecs() {
     chmod -R 755 /usr/lib/codecs/
 
     ldconfig
-    return $ERROR
+    return $?
 }
 
 install_libogg() {

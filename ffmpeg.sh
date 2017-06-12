@@ -111,9 +111,9 @@ then
     install_liba52 >>$LOG 2>1
     dots "Installing Liba52" $?
 
-    dots "Installing Fdk-AAC"
+    dots "Installing Libfdk"
     install_fdkaac >>$LOG 2>1
-    dots "Installing Fdk-AAC" $? 
+    dots "Installing Libfdk" $? 
 
     dots "Installing Libopus"
     install_libopus >>$LOG 2>1
@@ -176,9 +176,9 @@ dots "Installing Mediainfo"
 install_mediainfo >>$LOG 2>1
 dots "Installing Mediainfo" $?
 
-dots "Installing MPlayer"
+dots "Installing MPlayer + Codecs"
 install_mplayer >>$LOG 2>1
-dots "Installing MPlayer" $?
+dots "Installing MPlayer + Codecs" $?
 
 dots "Installing MP4Box"
 install_mp4box >>$LOG 2>1

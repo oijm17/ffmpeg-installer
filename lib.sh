@@ -202,7 +202,7 @@ install_liba52() {
 }
 
 install_fdkaac() {
-    echo " -------------- Installing FDK AAC -------------- "
+    echo " -------------- Installing Fdk-AAC -------------- "
     cd $DOWNDIR
     rm -vrf fdk-aac
     git clone https://github.com/mstorsjo/fdk-aac.git
@@ -216,8 +216,23 @@ install_fdkaac() {
     return $ERROR
 }
 
+install_libopus() {
+    echo " -------------- Installing Libopus -------------- "
+    cd $DOWNDIR
+    rm -vrf opus
+    git clone git://git.opus-codec.org/opus.git
+    cd opus/
+    ./autogen.sh || local ERROR=1
+    ./configure  --prefix=/usr --enable-static --enable-shared || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
 install_yasm() {
-    echo " -------------- Installing YASM -------------- " 
+    echo " -------------- Installing Yasm -------------- " 
     YASM_VER="1.3.0" #2014-08-11
     cd $DOWNDIR
     rm -vrf yasm-$YASM_VER
@@ -234,7 +249,7 @@ install_yasm() {
 }
 
 install_nasm() {
-    echo " -------------- Installing NASM -------------- "
+    echo " -------------- Installing Nasm -------------- "
     NASM_VER="2.14rc0" #2017-05-01
     cd $DOWNDIR
     rm -vrf nasm-$NASM_VER

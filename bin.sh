@@ -26,11 +26,17 @@ install_ffmpeg() {
 }
 
 install_mplayer() {
-    echo " -------------- Installing MPlayer -------------- "
+    echo " -------------- Installing MPlayer + Codecs -------------- "
     cd $DOWNDIR
-    rm -vrf mplayer-export*
+    rm -vrf mplayer-*
     wget -N http://mplayerhq.hu/MPlayer/releases/MPlayer-1.3.0.tar.gz
+    wget -N http://www.mplayerhq.hu/MPlayer/releases/codecs/all-20110131.tar.bz2
     tar -xzvf MPlayer-1.3.0.tar.gz
+    tar -xvjf all-20110131.tar.bz2
+    chown -R root.root all-20110131
+    mkdir -pv /usr/lib/codecs
+    cp -vrf all-20110131/* /usr/lib/codecs
+    chmod -R 755 /usr/lib/codecs
     cd MPlayer-1.3.0
     sed -i 1521d configure
     ./configure --prefix=/usr --codecsdir=/usr/lib/codecs \

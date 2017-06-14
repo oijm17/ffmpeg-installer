@@ -135,6 +135,10 @@ then
     install_x264 >>$LOG 2>1
     dots "Installing X264" $?
 
+    dots "Installing X265"
+    install_x265 >>$LOG 2>1
+    dots "Installing X265" $?
+    
     dots "Installing Live555"
     install_live555 >>$LOG 2>1
     dots "Installing Live555" $?

@@ -389,3 +389,21 @@ install_libasound() {
     ldconfig
     return $ERROR
 }
+
+install_psstream() {
+    echo " -------------- Installing Pseudo Streaming Support For Apache -------------- "
+    cd $DOWNDIR
+    rm -rf psstream
+    mkdir -pv /etc/httpd/conf.d
+    wget -N wget http://saaplugin.no-ip.info/lostandfound/psstream-1.0.tar.gz
+    tar xzvf psstream-*
+    cd psstream
+    phpize || local ERROR=1
+    ./configure --enable-psstream || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    cp -vrf psstream.ini /etc/httpd/conf.d/
+    
+    ldconfig
+    return $ERROR
+}

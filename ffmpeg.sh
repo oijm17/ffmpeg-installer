@@ -193,7 +193,7 @@ install_flvtool2 >>$LOG 2>1
 dots "Installing FlvTool2" $?
 
 dots "Installing Flvtool++"
-install_flvtool++ >>$LOG 2>1
+install_flvtoolpp >>$LOG 2>1
 dots "Installing Flvtool++" $?
 
 dots "Installing ffmpeg-php"

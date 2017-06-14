@@ -83,7 +83,7 @@ remove_stuff() {
 run_yum() {
     echo " -------------- Running Yum -------------- "
     sed -i '/exclude/s/^/#/g' /etc/yum.conf
-    yum remove -y ffmpeg x264 x265 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer
+    yum remove -y ffmpeg x264 x265 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer flvtool2 gpac*
 
     yum groupinstall "Development Tools" -y
     yum install ruby php-devel curl-devel gcc gcc-c++ libgcc gd gd-devel gettext \

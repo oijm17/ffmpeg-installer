@@ -391,7 +391,7 @@ install_libasound() {
 }
 
 install_psstream() {
-    echo " -------------- Installing Pseudo Streaming Support For Apache -------------- "
+    echo " -------------- Installing Psstream For Apache -------------- "
     cd $DOWNDIR
     rm -rf psstream
     mkdir -pv /etc/httpd/conf.d

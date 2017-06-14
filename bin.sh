@@ -86,7 +86,7 @@ install_flvtool2() {
     return $ERROR
 }
 
-install_flvtool++() {
+install_flvtoolpp() {
     echo " -------------- Installing FlvTool++ -------------- "
     cd $DOWNDIR
     rm -vrf flvtool++

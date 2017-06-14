@@ -90,7 +90,8 @@ install_flvtool++() {
     echo " -------------- Installing FlvTool++ -------------- "
     cd $DOWNDIR
     rm -vrf flvtool++
-    mkdir flvtool++
+    mkdir -pv flvtool++
+    chown -R root.root flvtool++
     cd flvtool++
     wget -N http://repo.bstack.net/flvtool++/flvtool++-1.2.1.tar.gz
     tar zxf flvtool++-1.2.1.tar.gz

@@ -75,10 +75,6 @@ then
     install_libwmf >>$LOG 2>1
     dots "Installing Libwmf" $?
 
-    dots "Installing FlvTool2"
-    install_flvtool >>$LOG 2>1
-    dots "Installing FlvTool2" $?
-
     dots "Installing Lame"
     install_lame >>$LOG 2>1
     dots "Installing Lame" $?
@@ -187,6 +183,14 @@ dots "Installing MPlayer" $?
 dots "Installing MP4Box"
 install_mp4box >>$LOG 2>1
 dots "Installing MP4Box" $?
+
+dots "Installing FlvTool2"
+install_flvtool2 >>$LOG 2>1
+dots "Installing FlvTool2" $?
+
+dots "Installing Flvtool++"
+install_flvtool++ >>$LOG 2>1
+dots "Installing Flvtool++" $?
 
 dots "Installing ffmpeg-php"
 install_ffmpegphp >>$LOG 2>1

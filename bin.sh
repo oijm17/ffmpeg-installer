@@ -72,6 +72,35 @@ install_mp4box() {
     return $ERROR
 }
 
+install_flvtool2() {
+    echo " -------------- Installing FlvTool2 -------------- "
+    cd $DOWNDIR
+    rm -vrf flvtool2
+    git clone https://github.com/unnu/flvtool2.git flvtool2
+    cd flvtool2
+    ruby setup.rb config || local ERROR=1
+    ruby setup.rb setup || local ERROR=1
+    ruby setup.rb install || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_flvtool++() {
+    echo " -------------- Installing FlvTool++ -------------- "
+    cd $DOWNDIR
+    rm -vrf flvtool++
+    mkdir flvtool++
+    cd flvtool++
+    wget -N http://repo.bstack.net/flvtool++/flvtool++-1.2.1.tar.gz
+    tar zxf flvtool++-1.2.1.tar.gz
+    scons
+    cp -vrf flvtool++ /usr/bin
+    
+    ldconfig
+    return $ERROR
+}
+
 install_ffmpegphp() {
     echo " -------------- Installing ffmpeg-php -------------- "
     cd $DOWNDIR

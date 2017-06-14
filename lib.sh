@@ -50,20 +50,6 @@ install_libwmf() {
     return $ERROR
 }
 
-install_flvtool() {
-    echo " -------------- Installing FlvTool2 -------------- "
-    cd $DOWNDIR
-    rm -vrf flvtool2
-    git clone https://github.com/unnu/flvtool2.git flvtool2
-    cd flvtool2
-    ruby setup.rb config || local ERROR=1
-    ruby setup.rb setup || local ERROR=1
-    ruby setup.rb install || local ERROR=1
-    
-    ldconfig
-    return $ERROR
-}
-
 install_lame() {
     echo " -------------- Installing Lame -------------- "
     LAME_MJVER="3.99" #2012-02-28

@@ -80,11 +80,11 @@ remove_stuff() {
 run_yum() {
     echo " -------------- Running Yum -------------- "
     sed -i '/exclude/s/^/#/g' /etc/yum.conf
-    yum remove -y ffmpeg x264 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer
+    yum remove -y ffmpeg x264 x265 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer
 
     yum groupinstall "Development Tools" -y
     yum install ruby php-devel curl-devel gcc gcc-c++ libgcc gd gd-devel gettext \
-    libjpeg* libjpeg-devel* libstdc++* libstdc++-devel* libtiff* \
+    cmake mercurial libjpeg* libjpeg-devel* libstdc++* libstdc++-devel* libtiff* \
     libtiff-devel* opus-devel* libtool* libxml* libxml2* wget \
     libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* \
     ncurses-devel ncurses patch make apr-util giflib-devel giflib neon \

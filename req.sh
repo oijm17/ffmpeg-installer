@@ -24,6 +24,7 @@ remove_stuff() {
     rm -rf /lib/libogg*
     rm -rf /lib/libtheora*
     rm -rf /lib/libvorbis*
+    rm -rf /lib/libx265*
 
     rm -rf /usr/lib/liba52*
     rm -rf /usr/lib/libamr*
@@ -38,6 +39,7 @@ remove_stuff() {
     rm -rf /usr/lib/libogg*
     rm -rf /usr/lib/libtheora*
     rm -rf /usr/lib/libvorbis*
+    rm -rf /usr/lib/libx265*
 
     rm -rf /usr/local/lib/liba52*
     rm -rf /usr/local/lib/libamr*
@@ -53,6 +55,7 @@ remove_stuff() {
     rm -rf /usr/local/lib/libtheora*
     rm -rf /usr/local/lib/libvorbis*
     rm -f /usr/lib/libxvidcore.*
+    rm -f /usr/lib/libx265*
 
     rm -rf /usr/share/ffmpeg
     rm -rf /usr/local/share/ffmpeg

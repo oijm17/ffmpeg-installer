@@ -11,10 +11,11 @@ install_ffmpeg() {
     cd FFmpeg-master/
     wget -N http://mirror.ffmpeginstaller.com/source/presets/presets.tar.gz
     tar -xvzf presets.tar.gz
+    export PKG_CONFIG_PATH=/usr/lib/pkgconfig:$PKG_CONFIG_PATH
     ./configure --prefix=/usr --enable-shared --enable-nonfree \
     --enable-gpl --enable-pthreads --enable-decoder=liba52 \
     --enable-libfdk-aac --enable-libopus --enable-libmp3lame \
-    --enable-libtheora --enable-libvorbis --enable-libx264 --enable-libxvid \
+    --enable-libtheora --enable-libvorbis --enable-libx264 --enable-libx265 --enable-libxvid \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib \
     --enable-version3 --extra-version=syslint --enable-libopencore-amrnb \
     --enable-libopencore-amrwb --enable-avfilter --enable-libvpx || local ERROR=1

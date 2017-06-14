@@ -159,6 +159,10 @@ then
     install_libasound >>$LOG 2>1
     dots "Installing Libasound" $?
 
+    dots "Installing Pseudo Streaming Support For Apache"
+    install_psstream >>$LOG 2>1
+    dots "Installing Pseudo Streaming Support For Apache" $?
+
     ldconfig 
 else
     echo "--- Skipping ---"

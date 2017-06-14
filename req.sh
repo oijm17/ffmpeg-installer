@@ -86,7 +86,7 @@ run_yum() {
     yum remove -y ffmpeg x264 x265 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer flvtool2 gpac*
 
     yum groupinstall "Development Tools" -y
-    yum install ruby php-devel curl-devel gcc gcc-c++ libgcc gd gd-devel gettext \
+    yum install ruby php-devel boost-devel curl-devel gcc gcc-c++ libgcc gd gd-devel gettext \
     cmake mercurial libjpeg* libjpeg-devel* libstdc++* libstdc++-devel* libtiff* \
     libtiff-devel* opus-devel* libtool* libxml* libxml2* wget \
     libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* \
@@ -95,6 +95,7 @@ run_yum() {
 
     sed -i '/exclude/s/^#//g' /etc/yum.conf
     
+    rpm -ivh http://repo.bstack.net/scons/scons-1.3.1-1.noarch.rpm
     rpm -e alsa-lib --nodeps
     return 0
 }

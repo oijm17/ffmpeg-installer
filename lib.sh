@@ -207,7 +207,7 @@ install_fdkaac() {
     rm -vrf fdk-aac
     git clone https://github.com/mstorsjo/fdk-aac.git
     cd fdk-aac/
-    ./autogen.sh || local ERROR=1
+    ./autogen.sh
     ./configure  --prefix=/usr --enable-shared --enable-static || local ERROR=1
     make -j$cpu || local ERROR=1
     make install $DESTDIR || local ERROR=1
@@ -289,6 +289,20 @@ install_x264() {
     cd x264/
     #broken centos5/32bit./configure  --prefix=/usr --enable-shared --disable-asm
     ./configure  --prefix=/usr --enable-shared || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_x265() {
+    echo " -------------- Installing X265 -------------- "
+    cd $DOWNDIR
+    rm -vrf x265
+    hg clone https://bitbucket.org/multicoreware/x265
+    cd x265/build/linux/
+    cmake -G "Unix Makefiles" cmake -DCMAKE_INSTALL_PREFIX:PATH="/usr/" ../../source || local ERROR=1
     make -j$cpu || local ERROR=1
     make install $DESTDIR || local ERROR=1
     

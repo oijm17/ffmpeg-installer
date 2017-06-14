@@ -159,9 +159,9 @@ then
     install_libasound >>$LOG 2>1
     dots "Installing Libasound" $?
 
-    dots "Installing Pseudo Streaming Support For Apache"
+    dots "Installing Psstream For Apache"
     install_psstream >>$LOG 2>1
-    dots "Installing Pseudo Streaming Support For Apache" $?
+    dots "Installing Psstream For Apache" $?
 
     ldconfig 
 else

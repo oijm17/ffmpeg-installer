@@ -133,7 +133,7 @@ install_vorbistools() {
 }
 
 install_libtheora() {
-    echo " -------------- Installing libtheora -------------- "
+    echo " -------------- Installing Theora -------------- "
     LIBTHEORA_VER="1.1.1" #2010-01-25
     cd $DOWNDIR
     rm -vrf libtheora-$LIBTHEORA_VER

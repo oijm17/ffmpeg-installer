@@ -124,7 +124,7 @@ install_vorbistools() {
     wget -N http://downloads.xiph.org/releases/vorbis/vorbis-tools-$VORBISTOOLS_VER.tar.gz
     tar -xvzf vorbis-tools-$VORBISTOOLS_VER.tar.gz
     cd vorbis-tools-$VORBISTOOLS_VER
-    ./configure --enable-shared --prefix=/usr
+    ./configure --enable-shared --prefix=/usr || local ERROR=1
     make -j$cpu || local ERROR=1
     make install $DESTDIR || local ERROR=1
     
@@ -133,7 +133,7 @@ install_vorbistools() {
 }
 
 install_libtheora() {
-    echo " -------------- Installing Theora -------------- "
+    echo " -------------- Installing libtheora -------------- "
     LIBTHEORA_VER="1.1.1" #2010-01-25
     cd $DOWNDIR
     rm -vrf libtheora-$LIBTHEORA_VER

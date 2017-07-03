@@ -13,7 +13,7 @@ install_ffmpeg() {
     tar -xvzf presets.tar.gz
     export PKG_CONFIG_PATH=/usr/lib/pkgconfig:$PKG_CONFIG_PATH
     ./configure --prefix=/usr --enable-shared --enable-nonfree --enable-libcaca --enable-demuxer=flac --enable-muxer=flac \
-    --enable-gpl --enable-pthreads --enable-decoder=liba52 --enable-bzlib --enable-libvidstab --enable-libopenjpeg \
+    --enable-gpl --enable-pthreads --enable-decoder=liba52 --enable-libvidstab --enable-libopenjpeg \
     --enable-libfdk-aac --enable-libopus --enable-libmp3lame --enable-libbluray --enable-libass --enable-libvo-amrwbenc \
     --enable-libtheora --enable-libvorbis --enable-libx264 --enable-libxvid --enable-libx265 --enable-parser=flac \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib --enable-runtime-cpudetect --enable-decoder=flac \

@@ -132,7 +132,7 @@ run_yum() {
     yum install ruby php-devel boost-devel curl-devel gcc gcc-c++ libgcc gd gd-devel gettext \
     cmake mercurial libjpeg* libjpeg-devel* libstdc++* libstdc++-devel* libtiff* vorbis-tools \
     libtiff-devel* opus-devel* libtool* libxml* libxml2* wget ant fribidi-devel alsa-lib \
-    libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* libvorbis-devel \
+    libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* libvorbis-devel libao-devel \
     ncurses-devel ncurses patch make apr-util giflib-devel giflib neon libtheora-devel \
     expat-devel gettext-devel openssl-devel subversion SDL-devel freeglut-devel perl -y
 

@@ -196,6 +196,10 @@ dots "Installing Flvtool++"
 install_flvtoolpp >>$LOG 2>1
 dots "Installing Flvtool++" $?
 
+dots "Installing Yamdi"
+install_yamdi >>$LOG 2>1
+dots "Installing Yamdi" $?
+
 dots "Installing ffmpeg-php"
 install_ffmpegphp >>$LOG 2>1
 dots "Installing ffmpeg-php" $?

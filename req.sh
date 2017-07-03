@@ -28,6 +28,15 @@ remove_stuff() {
     rm -rf /lib/libx265*
     rm -rf /lib/libFLAC*
     rm -rf /lib/libao*
+    rm -rf /lib/libvo-aacenc*
+    rm -rf /lib/libvidstab*
+    rm -rf /lib/libopenjp2*
+    rm -rf /lib/libbluray*
+    rm -rf /lib/libcaca*
+    rm -rf /lib/libass*
+    rm -rf /lib/libvo-amrwbenc*
+    rm -rf /lib/libspeex*
+    rm -rf /lib/liboggz*
     rm -rf /lib/php/modules/psstream*
 
     rm -rf /usr/lib/liba52*
@@ -47,6 +56,15 @@ remove_stuff() {
     rm -rf /usr/lib/libx265*
     rm -rf /usr/lib/libFLAC*
     rm -rf /usr/lib/libao*
+    rm -rf /usr/lib/libvo-aacenc*
+    rm -rf /usr/lib/libvidstab*
+    rm -rf /usr/lib/libopenjp2*
+    rm -rf /usr/lib/libbluray*
+    rm -rf /usr/lib/libcaca*
+    rm -rf /usr/lib/libass*
+    rm -rf /usr/lib/libvo-amrwbenc*
+    rm -rf /usr/lib/libspeex*
+    rm -rf /usr/lib/liboggz*
     rm -rf /usr/lib/php/modules/psstream*
 
     rm -rf /usr/local/lib/liba52*
@@ -66,6 +84,15 @@ remove_stuff() {
     rm -rf /usr/local/lib/libx265*
     rm -rf /usr/local/lib/libFLAC*
     rm -rf /usr/local/lib/libao*
+    rm -rf /usr/local/lib/libvo-aacenc*
+    rm -rf /usr/local/lib/libvidstab*
+    rm -rf /usr/local/lib/libopenjp2*
+    rm -rf /usr/local/lib/libbluray*
+    rm -rf /usr/local/lib/libcaca*
+    rm -rf /usr/local/lib/libass*
+    rm -rf /usr/local/lib/libvo-amrwbenc*
+    rm -rf /usr/local/lib/libspeex*
+    rm -rf /usr/local/lib/liboggz*
     rm -rf /usr/local/lib/php/modules/psstream.*
 
     rm -rf /usr/share/ffmpeg
@@ -87,6 +114,8 @@ remove_stuff() {
     unlink /usr/local/bin/flvtool2 >/dev/null 2>&1
     unlink /usr/bin/flvtool++ >/dev/null 2>&1
     unlink /usr/local/bin/flvtool++ >/dev/null 2>&1
+    unlink /usr/bin/yamdi >/dev/null 2>&1
+    unlink /usr/local/bin/yamdi >/dev/null 2>&1
     rm -rf /usr/local/cpffmpeg
     rm -rf $HOME/tmp
     mkdir -p $HOME/tmp

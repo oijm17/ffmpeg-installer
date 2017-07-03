@@ -15,7 +15,7 @@ install_ffmpeg() {
     ./configure --prefix=/usr --enable-shared --enable-nonfree --enable-libcaca \
     --enable-gpl --enable-pthreads --enable-decoder=liba52 --enable-bzlib \
     --enable-libfdk-aac --enable-libopus --enable-libmp3lame --enable-libbluray \
-    --enable-libtheora --enable-libvorbis --enable-libx264 --enable-libxvid --enable-libx265 --enable-libxvid \
+    --enable-libtheora --enable-libvorbis --enable-libx264 --enable-libxvid --enable-libx265 \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib --enable-runtime-cpudetect \
     --enable-version3 --extra-version=syslint --enable-libopencore-amrnb \
     --enable-libopencore-amrwb --enable-avfilter --enable-libvpx || local ERROR=1

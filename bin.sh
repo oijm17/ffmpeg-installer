@@ -102,6 +102,22 @@ install_flvtoolpp() {
     return $ERROR
 }
 
+install_yamdi() {
+    echo " -------------- Installing Yamdi -------------- "
+    cd $DOWNDIR
+    rm -vrf yamdi-1.9
+    wget -N https://downloads.sourceforge.net/project/yamdi/yamdi/1.9/yamdi-1.9.tar.gz
+    tar -zxvf yamdi-1.9.tar.gz
+    cd yamdi-1.9
+    gcc yamdi.c -o yamdi -O2 -Wall  -D_FILE_OFFSET_BITS=647 || local ERROR=1
+    mv -vf yamdi /usr/bin/
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
 install_ffmpegphp() {
     echo " -------------- Installing ffmpeg-php -------------- "
     cd $DOWNDIR

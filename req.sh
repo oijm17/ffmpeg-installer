@@ -37,7 +37,6 @@ remove_stuff() {
     rm -rf /lib/libvo-amrwbenc*
     rm -rf /lib/libspeex*
     rm -rf /lib/liboggz*
-    rm -rf /lib/libintl*
     rm -rf /lib/php/modules/psstream*
 
     rm -rf /usr/lib/liba52*
@@ -66,7 +65,6 @@ remove_stuff() {
     rm -rf /usr/lib/libvo-amrwbenc*
     rm -rf /usr/lib/libspeex*
     rm -rf /usr/lib/liboggz*
-    rm -rf /usr/lib/libintl*
     rm -rf /usr/lib/php/modules/psstream*
 
     rm -rf /usr/local/lib/liba52*
@@ -95,7 +93,6 @@ remove_stuff() {
     rm -rf /usr/local/lib/libvo-amrwbenc*
     rm -rf /usr/local/lib/libspeex*
     rm -rf /usr/local/lib/liboggz*
-    rm -rf /usr/local/lib/libintl*
     rm -rf /usr/local/lib/php/modules/psstream.*
 
     rm -rf /usr/share/ffmpeg

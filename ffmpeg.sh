@@ -63,17 +63,17 @@ echo -e "\n#### Installing Libraries #### \n"
 
 if ! $binonly
 then
-    dots "Installing Libpng"
+    dots "Installing Png"
     install_libpng >>$LOG 2>1
-    dots "Installing Libpng" $?
+    dots "Installing Png" $?
         
     dots "Installing Freetype"
     install_freetype >>$LOG 2>1
     dots "Installing Freetype" $?
 
-    dots "Installing Libwmf"
+    dots "Installing Wmf"
     install_libwmf >>$LOG 2>1
-    dots "Installing Libwmf" $?
+    dots "Installing Wmf" $?
 
     dots "Installing Lame"
     install_lame >>$LOG 2>1
@@ -158,6 +158,54 @@ then
     dots "Installing Libasound"
     install_libasound >>$LOG 2>1
     dots "Installing Libasound" $?
+
+    dots "Installing Flac"
+    install_flac >>$LOG 2>1
+    dots "Installing Flac" $?
+
+    dots "Installing Ao"
+    install_libao >>$LOG 2>1
+    dots "Installing Ao" $?
+
+    dots "Installing Vo-AacEnc"
+    install_voaacenc >>$LOG 2>1
+    dots "Installing Vo-AacEnc" $?
+
+    dots "Installing VidStab"
+    install_libvidstab >>$LOG 2>1
+    dots "Installing VidStab" $?
+
+    dots "Installing OpenJPEG"
+    install_libopenjpeg >>$LOG 2>1
+    dots "Installing OpenJPEG" $?
+
+    dots "Installing Mp4v2"
+    install_libmp4v2 >>$LOG 2>1
+    dots "Installing Mp4v2" $?
+
+    dots "Installing Bluray"
+    install_libbluray >>$LOG 2>1
+    dots "Installing Bluray" $?
+
+    dots "Installing Caca"
+    install_libcaca >>$LOG 2>1
+    dots "Installing Caca" $?
+
+    dots "Installing Ass"
+    install_libass >>$LOG 2>1
+    dots "Installing Ass" $?
+
+    dots "Installing Vo-AmrwBenc"
+    install_libvoamrwbenc >>$LOG 2>1
+    dots "Installing Vo-AmrwBenc" $?
+
+    dots "Installing Speex"
+    install_libspeex >>$LOG 2>1
+    dots "Installing Speex" $?
+
+    dots "Installing Oggz"
+    install_liboggz >>$LOG 2>1
+    dots "Installing Oggz" $?
 
     dots "Installing Psstream For Apache"
     install_psstream >>$LOG 2>1

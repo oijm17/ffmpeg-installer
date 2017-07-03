@@ -168,7 +168,7 @@ install_liba52() {
     echo " -------------- Installing A52 -------------- "
     LIBA52_VER="0.7.4" #2002-07-27
     cd $DOWNDIR
-    rm -rf a52dec-$LIBA52_VER
+    rm -vrf a52dec-$LIBA52_VER
     wget -N http://liba52.sourceforge.net/files/a52dec-$LIBA52_VER.tar.gz
     tar -xvzf a52dec-$LIBA52_VER.tar.gz
     cd a52dec-$LIBA52_VER
@@ -377,7 +377,7 @@ install_libvpx() {
 install_libasound() {
     echo " -------------- Installing Asound -------------- "
     cd $DOWNDIR
-    rm -rf alsa-lib*
+    rm -vrf alsa-lib*
     wget -N ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.1.4.1.tar.bz2
     tar xjf alsa-lib*
     cd alsa-lib-*
@@ -582,7 +582,7 @@ install_liboggz() {
 install_psstream() {
     echo " -------------- Installing Psstream For Apache -------------- "
     cd $DOWNDIR
-    rm -rf psstream
+    rm -vrf psstream
     mkdir -pv /etc/httpd/conf.d
     wget -N wget http://saaplugin.no-ip.info/lostandfound/psstream-1.0.tar.gz
     tar xzvf psstream-*

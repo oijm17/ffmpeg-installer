@@ -75,7 +75,7 @@ install_codecs() {
     #wget -N http://mirror.ffmpeginstaller.com/source/codecs/all-$FFMPEG_CODECS_VER.tar.bz2
     wget -N http://www.mplayerhq.hu/MPlayer/releases/codecs/all-$FFMPEG_CODECS_VER.tar.bz2
     tar -xvjf all-$FFMPEG_CODECS_VER.tar.bz2
-    chown -R root.root all-$FFMPEG_CODECS_VER/
+    chown -R root.root all-$FFMPEG_CODECS_VER
     mkdir -pv /usr/lib/codecs/
     /bin/cp -vrf all-$FFMPEG_CODECS_VER/* /usr/lib/codecs/
     chmod -R 755 /usr/lib/codecs/
@@ -107,7 +107,7 @@ install_libvorbis() {
     rm -vrf libvorbis-$LIBVORBIS_VER
     wget -N http://downloads.xiph.org/releases/vorbis/libvorbis-$LIBVORBIS_VER.tar.gz
     tar -xvzf libvorbis-$LIBVORBIS_VER.tar.gz
-    cd libvorbis-$LIBVORBIS_VER/
+    cd libvorbis-$LIBVORBIS_VER
     ./configure --enable-shared --prefix=/usr || local ERROR=1
     make -j$cpu || local ERROR=1
     make install $DESTDIR || local ERROR=1
@@ -171,7 +171,7 @@ install_liba52() {
     rm -rf a52dec-$LIBA52_VER
     wget -N http://liba52.sourceforge.net/files/a52dec-$LIBA52_VER.tar.gz
     tar -xvzf a52dec-$LIBA52_VER.tar.gz
-    cd a52dec-$LIBA52_VER/
+    cd a52dec-$LIBA52_VER
     ./bootstrap
     ARCH=`arch`
     #64bit processor bug fix
@@ -320,7 +320,7 @@ install_re2c() {
     rm -vrf re2c-$RE2C_VER
     wget -N https://github.com/skvadrik/re2c/releases/download/$RE2C_VER/re2c-$RE2C_VER.tar.gz
     tar -xvzf re2c-$RE2C_VER.tar.gz
-    cd re2c-$RE2C_VER/
+    cd re2c-$RE2C_VER
     ./configure --enable-shared --prefix=/usr || local ERROR=1
     make -j$cpu || local ERROR=1
     make install $DESTDIR || local ERROR=1

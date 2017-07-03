@@ -379,10 +379,199 @@ install_libasound() {
     cd $DOWNDIR
     rm -rf alsa-lib*
     wget -N ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.1.4.1.tar.bz2
-    # wget -N ftp://ftp.alsa-project.org//pub/lib/alsa-lib-1.1.0.tar.bz2
     tar xjf alsa-lib*
     cd alsa-lib-*
     ./configure --enable-shared --prefix=/usr || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_flac() {
+    echo " -------------- Installing Flac -------------- "
+    cd $DOWNDIR
+    rm -vrf flac-1.3.2
+    wget -N http://downloads.xiph.org/releases/flac/flac-1.3.2.tar.xz
+    tar -Jxf flac-1.3.2.tar.xz
+    cd flac-1.3.2
+    ./configure --prefix=/usr --enable-shared || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_libao() {
+    echo " -------------- Installing Ao -------------- "
+    cd $DOWNDIR
+    rm -vrf libao-1.2.0
+    wget -N http://downloads.xiph.org/releases/ao/libao-1.2.0.tar.gz
+    tar -zxvf libao-1.2.0.tar.gz
+    cd libao-1.2.0
+    ./configure --prefix=/usr --enable-shared || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_voaacenc() {
+    echo " -------------- Installing Vo-AacEnc -------------- "
+    cd $DOWNDIR
+    rm -vrf vo-aacenc-0.1.3
+    wget -N http://downloads.sourceforge.net/project/opencore-amr/vo-aacenc/vo-aacenc-0.1.3.tar.gz
+    tar -zxvf vo-aacenc-0.1.3.tar.gz
+    cd vo-aacenc-0.1.3
+    ./configure --prefix=/usr --enable-shared || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_libvidstab() {
+    echo " -------------- Installing VidStab -------------- "
+    cd $DOWNDIR
+    rm -vrf vid.stab
+    git clone https://github.com/georgmartius/vid.stab.git
+    cd vid.stab
+    cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr/
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_libopenjpeg() {
+    echo " -------------- Installing OpenJPEG -------------- "
+    cd $DOWNDIR
+    rm -vrf openjpeg
+    git clone https://github.com/uclouvain/openjpeg.git
+    cd openjpeg
+    autoreconf -fiv
+    rm -fr build/
+    mkdir build/
+    cd build/
+    cmake .. -DCMAKE_INSTALL_PREFIX:PATH=/usr/ || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    make clean || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_libmp4v2() {
+    echo " -------------- Installing Mp4v2 -------------- "
+    cd $DOWNDIR
+    rm -vrf libmp4v2
+    git clone https://github.com/sergiomb2/libmp4v2.git
+    cd libmp4v2
+    autoreconf -fiv
+    rm -fr build/
+    mkdir build/
+    cd build/
+    ../configure --prefix=/usr/ --enable-shared --disable-static || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    make install-man || local ERROR=1
+    make dist || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_libbluray() {
+    echo " -------------- Installing Bluray -------------- "
+    cd $DOWNDIR
+    rm -vrf libbluray-1.0.0
+    wget -N ftp://ftp.videolan.org/pub/videolan/libbluray/1.0.0/libbluray-1.0.0.tar.bz2
+    tar -xjvf libbluray-1.0.0.tar.bz2
+    cd libbluray-1.0.0
+    ./bootstrap
+    ./configure --prefix=/usr/ --enable-shared  --disable-static || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_libcaca() {
+    echo " -------------- Installing Caca -------------- "
+    cd $DOWNDIR
+    rm -vrf libcaca
+    git clone https://github.com/cacalabs/libcaca.git
+    cd libcaca
+    ./bootstrap
+    git submodule update --init
+    ./configure --prefix=/usr/ --enable-shared  --disable-static || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_libass() {
+    echo " -------------- Installing Ass -------------- "
+    cd $DOWNDIR
+    rm -vrf libass-0.13.7
+    wget -N https://github.com/libass/libass/releases/download/0.13.7/libass-0.13.7.tar.gz
+    tar -zxvf libass-0.13.7.tar.gz
+    cd libass-0.13.7
+    ./configure --prefix=/usr/ --enable-shared  --disable-static || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_libvoamrwbenc() {
+    echo " -------------- Installing Vo-AmrwBenc -------------- "
+    cd $DOWNDIR
+    rm -vrf vo-amrwbenc-0.1.3
+    wget -N https://downloads.sourceforge.net/project/opencore-amr/vo-amrwbenc/vo-amrwbenc-0.1.3.tar.gz
+    tar -zxvf vo-amrwbenc-0.1.3.tar.gz
+    cd vo-amrwbenc-0.1.3
+    ./configure --prefix=/usr/ --enable-shared  --disable-static || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_libspeex() {
+    echo " -------------- Installing Speex -------------- "
+    cd $DOWNDIR
+    rm -vrf speex-1.2.0
+    wget -N http://downloads.us.xiph.org/releases/speex/speex-1.2.0.tar.gz
+    tar -zxvf speex-1.2.0.tar.gz
+    cd speex-1.2.0
+    ./configure --prefix=/usr/ --enable-shared  --disable-static || local ERROR=1
+    make -j$cpu || local ERROR=1
+    make install $DESTDIR || local ERROR=1
+    
+    ldconfig
+    return $ERROR
+}
+
+install_liboggz() {
+    echo " -------------- Installing Oggz -------------- "
+    cd $DOWNDIR
+    rm -vrf liboggz-1.1.1
+    wget -N http://downloads.xiph.org/releases/liboggz/liboggz-1.1.1.tar.gz
+    tar -zxvf liboggz-1.1.1.tar.gz
+    cd liboggz-1.1.1
+    ./configure --prefix=/usr/ --enable-shared  --disable-static || local ERROR=1
     make -j$cpu || local ERROR=1
     make install $DESTDIR || local ERROR=1
     

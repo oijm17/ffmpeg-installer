@@ -125,7 +125,7 @@ install_vorbistools() {
     tar -xvzf vorbis-tools-$VORBISTOOLS_VER.tar.gz
     cd vorbis-tools-$VORBISTOOLS_VER
     ./configure --enable-shared --prefix=/usr || local ERROR=1
-    make -j$cpu
+    make -j$cpu || local ERROR=1
     make install $DESTDIR
     
     ldconfig

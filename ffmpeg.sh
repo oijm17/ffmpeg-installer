@@ -83,37 +83,37 @@ then
     install_codecs >>$LOG 2>1
     dots "Installing Mplayer Codecs" $?
 
-    dots "Installing Libogg"
+    dots "Installing Ogg"
     install_libogg >>$LOG 2>1
-    dots "Installing Libogg" $?
+    dots "Installing Ogg" $?
 
-    dots "Installing Libvorbis"
+    dots "Installing Vorbis"
     install_libvorbis >>$LOG 2>1
-    dots "Installing Libvorbis" $?
+    dots "Installing Vorbis" $?
 
     dots "Installing VorbisTools"
     install_vorbistools >>$LOG 2>1
     dots "Installing VorbisTools" $?
 
-    dots "Installing Libtheora"
+    dots "Installing Theora"
     install_libtheora >>$LOG 2>1
-    dots "Installing Libtheora" $?
+    dots "Installing Theora" $?
 
     dots "Installing Opencore-AMR"
     install_openamr >>$LOG 2>1
     dots "Installing Opencore-AMR" $?
 
-    dots "Installing Liba52" 
+    dots "Installing A52" 
     install_liba52 >>$LOG 2>1
-    dots "Installing Liba52" $?
+    dots "Installing A52" $?
 
-    dots "Installing Libfdk"
+    dots "Installing Fdk"
     install_fdkaac >>$LOG 2>1
-    dots "Installing Libfdk" $? 
+    dots "Installing Fdk" $? 
 
-    dots "Installing Libopus"
+    dots "Installing Opus"
     install_libopus >>$LOG 2>1
-    dots "Installing Libopus" $?
+    dots "Installing Opus" $?
 
     dots "Installing Yasm"
     install_yasm >>$LOG 2>1
@@ -151,13 +151,13 @@ then
     install_amrwb >>$LOG 2>1
     dots "Installing Amrwb" $?
 
-    dots "Installing Libvpx"
+    dots "Installing Vpx"
     install_libvpx >>$LOG 2>1
-    dots "Installing Libvpx" $?
+    dots "Installing Vpx" $?
     
-    dots "Installing Libasound"
+    dots "Installing Asound"
     install_libasound >>$LOG 2>1
-    dots "Installing Libasound" $?
+    dots "Installing Asound" $?
 
     dots "Installing Flac"
     install_flac >>$LOG 2>1

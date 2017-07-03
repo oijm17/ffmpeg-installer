@@ -126,7 +126,7 @@ install_vorbistools() {
     cd vorbis-tools-$VORBISTOOLS_VER
     ./configure --enable-shared --prefix=/usr || local ERROR=1
     make -j$cpu || local ERROR=1
-    make install $DESTDIR
+    make install $DESTDIR || local ERROR=1
     
     ldconfig
     return $ERROR

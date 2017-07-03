@@ -134,7 +134,7 @@ run_yum() {
     libtiff-devel* opus-devel* libtool* libxml* libxml2* wget ant fribidi-devel alsa-lib flac \
     libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* libvorbis-devel libao-devel \
     ncurses-devel ncurses patch make apr-util giflib-devel giflib neon libtheora-devel flac-devel \
-    expat-devel gettext-devel openssl-devel subversion SDL-devel freeglut-devel perl -y
+    expat-devel gettext-devel openssl-devel subversion SDL-devel freeglut-devel perl speex-devel -y
 
     sed -i '/exclude/s/^#//g' /etc/yum.conf
     

@@ -4,7 +4,7 @@
 ERROR=0
 
 install_libpng() {
-    echo " -------------- Installing Libpng -------------- "
+    echo " -------------- Installing Png -------------- "
     cd $DOWNDIR
     rm -vrf libpng-*
     wget -N ftp://ftp.simplesystems.org/pub/png/src/libpng16/$(curl -L ftp://ftp.simplesystems.org/pub/png/src/libpng16/ 2>1 | grep -E ".tar.gz$" | awk '{ print $NF }')
@@ -35,7 +35,7 @@ install_freetype() {
 }
 
 install_libwmf() {
-    echo " -------------- Installing Libwmf -------------- "    
+    echo " -------------- Installing Wmf -------------- "    
     LIBWMF_VER="0.2.8.4" #2005-7-27
     cd $DOWNDIR
     rm -vrf libwmf-$LIBWMF_VER
@@ -85,7 +85,7 @@ install_codecs() {
 }
 
 install_libogg() {
-    echo " -------------- Installing Libogg -------------- "
+    echo " -------------- Installing Ogg -------------- "
     LIBOGG_VER="1.3.2" #2014-05-27
     cd $DOWNDIR
     rm -vrf libogg-$LIBOGG_VER
@@ -101,7 +101,7 @@ install_libogg() {
 }
 
 install_libvorbis() {
-    echo " -------------- Installing Libvorbis -------------- "
+    echo " -------------- Installing Vorbis -------------- "
     LIBVORBIS_VER="1.3.5" #2015-03-03
     cd $DOWNDIR
     rm -vrf libvorbis-$LIBVORBIS_VER
@@ -133,7 +133,7 @@ install_vorbistools() {
 }
 
 install_libtheora() {
-    echo " -------------- Installing Libtheora -------------- "
+    echo " -------------- Installing Theora -------------- "
     LIBTHEORA_VER="1.1.1" #2010-01-25
     cd $DOWNDIR
     rm -vrf libtheora-$LIBTHEORA_VER
@@ -165,7 +165,7 @@ install_openamr() {
 }
 
 install_liba52() {
-    echo " -------------- Installing Liba52 -------------- "
+    echo " -------------- Installing A52 -------------- "
     LIBA52_VER="0.7.4" #2002-07-27
     cd $DOWNDIR
     rm -rf a52dec-$LIBA52_VER
@@ -188,7 +188,7 @@ install_liba52() {
 }
 
 install_fdkaac() {
-    echo " -------------- Installing Libfdk -------------- "
+    echo " -------------- Installing Fdk -------------- "
     cd $DOWNDIR
     rm -vrf fdk-aac
     git clone https://github.com/mstorsjo/fdk-aac.git
@@ -203,7 +203,7 @@ install_fdkaac() {
 }
 
 install_libopus() {
-    echo " -------------- Installing Libopus -------------- "
+    echo " -------------- Installing Opus -------------- "
     cd $DOWNDIR
     rm -vrf opus
     git clone git://git.opus-codec.org/opus.git
@@ -361,7 +361,7 @@ install_amrwb() {
 }
 
 install_libvpx() {
-    echo " -------------- Installing Libvpx -------------- "
+    echo " -------------- Installing Vpx -------------- "
     cd $DOWNDIR
     rm -vrf libvpx
     git clone https://chromium.googlesource.com/webm/libvpx libvpx
@@ -375,7 +375,7 @@ install_libvpx() {
 }
 
 install_libasound() {
-    echo " -------------- Installing Libasound -------------- "
+    echo " -------------- Installing Asound -------------- "
     cd $DOWNDIR
     rm -rf alsa-lib*
     wget -N ftp://ftp.alsa-project.org/pub/lib/alsa-lib-1.1.4.1.tar.bz2

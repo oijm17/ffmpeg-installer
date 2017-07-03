@@ -24,7 +24,10 @@ remove_stuff() {
     rm -rf /lib/libogg*
     rm -rf /lib/libtheora*
     rm -rf /lib/libvorbis*
+    rm -rf /lib/libxvidcore.*
     rm -rf /lib/libx265*
+    rm -rf /lib/libFLAC*
+    rm -rf /lib/libao*
     rm -rf /lib/php/modules/psstream*
 
     rm -rf /usr/lib/liba52*
@@ -40,8 +43,10 @@ remove_stuff() {
     rm -rf /usr/lib/libogg*
     rm -rf /usr/lib/libtheora*
     rm -rf /usr/lib/libvorbis*
-    rm -f /usr/lib/libxvidcore.*
+    rm -rf /usr/lib/libxvidcore.*
     rm -rf /usr/lib/libx265*
+    rm -rf /usr/lib/libFLAC*
+    rm -rf /usr/lib/libao*
     rm -rf /usr/lib/php/modules/psstream*
 
     rm -rf /usr/local/lib/liba52*
@@ -57,9 +62,11 @@ remove_stuff() {
     rm -rf /usr/local/lib/libogg*
     rm -rf /usr/local/lib/libtheora*
     rm -rf /usr/local/lib/libvorbis*
+    rm -rf /usr/local/lib/libxvidcore.*
     rm -rf /usr/local/lib/libx265*
+    rm -rf /usr/local/lib/libFLAC*
+    rm -rf /usr/local/lib/libao*
     rm -rf /usr/local/lib/php/modules/psstream.*
-    rm -f /usr/local/lib/libxvidcore.*
 
     rm -rf /usr/share/ffmpeg
     rm -rf /usr/local/share/ffmpeg

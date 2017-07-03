@@ -481,7 +481,7 @@ install_libmp4v2() {
     make -j$cpu || local ERROR=1
     make install $DESTDIR || local ERROR=1
     make install-man || local ERROR=1
-    make dist || local ERROR=1
+    # make dist || local ERROR=1
     
     ldconfig
     return $ERROR

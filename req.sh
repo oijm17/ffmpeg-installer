@@ -126,7 +126,7 @@ remove_stuff() {
 run_yum() {
     echo " -------------- Running Yum -------------- "
     sed -i '/exclude/s/^/#/g' /etc/yum.conf
-    yum remove -y ffmpeg x264 libvpx libogg libvorbis libtheora libx264 x265 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer flvtool2 gpac*
+    yum remove -y rpmforge-release ffmpeg x264 libvpx libogg libvorbis libtheora libx264 x265 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer flvtool2 gpac*
 
     yum groupinstall "Development Tools" -y
     yum install ruby php-devel boost-devel curl-devel gcc gcc-c++ libgcc gd gd-devel gettext libogg-devel nasm opencv dbus-devel lua-devel \
@@ -135,7 +135,12 @@ run_yum() {
     libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* libvorbis-devel libao-devel pulseaudio-libs-devel libgcrypt-devel \
     ncurses-devel ncurses patch make apr-util giflib-devel giflib neon libtheora-devel qt-devel gsm-devel libbluray-devel libdvdnav-devel \
     expat-devel gettext-devel openssl-devel subversion SDL-devel freeglut-devel perl speex-devel -y
-
+    
+    #Installing third party package dependencies
+    yum install epel-release -y
+    yum --enablerepo=epel install libdc1394-devel zvbi yasm a52dec-devel \
+    libva-devel libass-devel libkate-devel libcddb-devel libmodplug-devel -y
+    
     sed -i '/exclude/s/^#//g' /etc/yum.conf
     
     rpm -ivh http://repo.bstack.net/scons/scons-1.3.1-1.noarch.rpm

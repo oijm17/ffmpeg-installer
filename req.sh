@@ -133,7 +133,7 @@ run_yum() {
     cmake mercurial libjpeg* libjpeg-devel* libstdc++* libstdc++-devel* libtiff* vorbis-tools libvpx-devel libdvdread-devel libxcb-devel \
     libtiff-devel* opus-devel* libtool* libxml* libxml2* wget ant fribidi-devel alsa-lib-devel flac flac-devel xcb-util-devel mesa-libGLU-devel \
     libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* libvorbis-devel libao-devel pulseaudio-libs-devel libgcrypt-devel \
-    ncurses-devel ncurses patch make apr-util giflib-devel giflib neon libtheora-devel qt-devel gsm-devel\
+    ncurses-devel ncurses patch make apr-util giflib-devel giflib neon libtheora-devel qt-devel gsm-devel libbluray-devel libdvdnav-devel \
     expat-devel gettext-devel openssl-devel subversion SDL-devel freeglut-devel perl speex-devel -y
 
     sed -i '/exclude/s/^#//g' /etc/yum.conf

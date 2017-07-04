@@ -59,6 +59,6 @@ Programs Installed
 
 Future
 ---
-- Add all necessary prereq's
+- Add all necessary Prereq's
 
 [1]: http://www.ffmpeginstaller.com/

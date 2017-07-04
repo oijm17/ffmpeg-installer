@@ -126,14 +126,14 @@ remove_stuff() {
 run_yum() {
     echo " -------------- Running Yum -------------- "
     sed -i '/exclude/s/^/#/g' /etc/yum.conf
-    yum remove -y ffmpeg x264 x265 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer flvtool2 gpac*
+    yum remove -y ffmpeg x264 libvpx libogg libvorbis libtheora libx264 x265 wt-cpanel-ffmpeg-php xvidcore lame* mencoder mplayer flvtool2 gpac*
 
     yum groupinstall "Development Tools" -y
-    yum install ruby php-devel boost-devel curl-devel gcc gcc-c++ libgcc gd gd-devel gettext \
-    cmake mercurial libjpeg* libjpeg-devel* libstdc++* libstdc++-devel* libtiff* vorbis-tools \
-    libtiff-devel* opus-devel* libtool* libxml* libxml2* wget ant fribidi-devel alsa-lib flac \
-    libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* libvorbis-devel libao-devel \
-    ncurses-devel ncurses patch make apr-util giflib-devel giflib neon libtheora-devel flac-devel \
+    yum install ruby php-devel boost-devel curl-devel gcc gcc-c++ libgcc gd gd-devel gettext libogg-devel nasm opencv dbus-devel lua-devel \
+    cmake mercurial libjpeg* libjpeg-devel* libstdc++* libstdc++-devel* libtiff* vorbis-tools libvpx-devel libdvdread-devel libxcb-devel \
+    libtiff-devel* opus-devel* libtool* libxml* libxml2* wget ant fribidi-devel alsa-lib-devel flac flac-devel xcb-util-devel mesa-libGLU-devel \
+    libxml2-devel* zlib* zlib-devel* automake* autoconf* samba-common* libvorbis-devel libao-devel pulseaudio-libs-devel libgcrypt-devel \
+    ncurses-devel ncurses patch make apr-util giflib-devel giflib neon libtheora-devel qt-devel gsm-devel\
     expat-devel gettext-devel openssl-devel subversion SDL-devel freeglut-devel perl speex-devel -y
 
     sed -i '/exclude/s/^#//g' /etc/yum.conf

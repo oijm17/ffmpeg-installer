@@ -3,7 +3,7 @@
 ERROR=0
 
 install_ffmpeg() {
-    echo " -------------- Installing ffmpeg + Presets -------------- "
+    echo " -------------- Installing FFmpeg + Presets -------------- "
     cd $DOWNDIR
     rm -vrf FFmpeg-master
     wget -N https://github.com/FFmpeg/FFmpeg/archive/master.zip -O ffmpeg.zip
@@ -119,7 +119,7 @@ install_yamdi() {
 }
 
 install_ffmpegphp() {
-    echo " -------------- Installing ffmpeg-php -------------- "
+    echo " -------------- Installing FFmpeg-Php -------------- "
     cd $DOWNDIR
     rm -rfv ffmpeg-php
     git clone https://github.com/tony2001/ffmpeg-php.git

@@ -248,6 +248,6 @@ dots "Installing Yamdi"
 install_yamdi >>$LOG 2>1
 dots "Installing Yamdi" $?
 
-dots "Installing FFmpeg-php"
+dots "Installing FFmpeg-Php"
 install_ffmpegphp >>$LOG 2>1
 dots "Installing ffmpeg-php" $?

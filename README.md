@@ -11,40 +11,54 @@ That's it! Pretty simple right! You should start seeing green "completed" if eve
 
 Libraries Installed
 ---
-- Libpng
+- Png
 - FreeType
-- libwmf
-- FlvTool2
+- Wmf
 - Lame
-- libogg
-- libvorbis
+- Ogg
+- Vorbis
 - VorbisTools
-- libtheora
-- openamr
-- Liba52
-- Libfdk
-- Libopus
+- Theora
+- Opencore-AMR
+- A52
+- Fdk-Aac
+- Opus
 - Yasm
 - Nasm
 - Xvid
-- x264
+- X264
 - Live555
-- re2c
-- amrnb
-- amrwb
-- libvpx
-- libasound
+- Re2c
+- Amrnb
+- Amrwb
+- Vpx
+- Asound
+- Flac
+- Ao
+- Vo-AacEnc
+- VidStab
+- OpenJPEG
+- Mp4v2
+- Bluray
+- Caca
+- Ass
+- Vo-AmrwBenc
+- Speex
+- Oggz
+- Psstream For Apache
 
 Programs Installed
 ---
-- ffmpeg
+- FFmpeg
 - MPlayer
 - MP4Box
-- ffmpeg-php (GitHub Fork) - (Discontinued For lastest ffmpeg Version)
+- FlvTool2
+- FlvTool++
+- Yamdi
+- FFmpeg-Php (GitHub Fork) - (Discontinued For lastest FFmpeg Version)
 
 Future
 ---
 - Add all necessary prereq's
-- Support for Ubuntu
 
 [1]: http://www.ffmpeginstaller.com/

@@ -17,7 +17,7 @@ install_ffmpeg() {
     --enable-libfdk-aac --enable-libopus --enable-libmp3lame --enable-libbluray --enable-libass --enable-libvo-amrwbenc \
     --enable-libtheora --enable-libvorbis --enable-libx264 --enable-libxvid --enable-libx265 --enable-parser=flac \
     --extra-cflags=-I/usr/include/ --extra-ldflags=-L/usr/lib --enable-runtime-cpudetect --enable-decoder=flac \
-    --enable-version3 --extra-version=syslint --enable-libopencore-amrnb --enable-encoder=flac \
+    --enable-version3 --extra-version=syslint --enable-libopencore-amrnb --enable-encoder=flac --enable-libfreetype \
     --enable-libopencore-amrwb --enable-avfilter --enable-libvpx --enable-libspeex || local ERROR=1
     make || local ERROR=1
     make tools/qt-faststart || local ERROR=1

@@ -220,7 +220,7 @@ fi
 
 echo -e "\n#### Installing FFMPEG Binaries #### \n"
 
-dots "Installing ffmpeg + Presets"
+dots "Installing FFmpeg + Presets"
 install_ffmpeg >>$LOG 2>1
 dots "Installing ffmpeg + Presets" $?
 
@@ -248,6 +248,6 @@ dots "Installing Yamdi"
 install_yamdi >>$LOG 2>1
 dots "Installing Yamdi" $?
 
-dots "Installing ffmpeg-php"
+dots "Installing FFmpeg-php"
 install_ffmpegphp >>$LOG 2>1
 dots "Installing ffmpeg-php" $?
